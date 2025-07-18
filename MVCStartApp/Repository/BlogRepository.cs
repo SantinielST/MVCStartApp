@@ -1,0 +1,29 @@
+﻿using Microsoft.EntityFrameworkCore;
+using MVCStartApp.DLL.Repository.Interfaces;
+using MVCStartApp.Models;
+
+namespace MVCStartApp.Repository
+{
+    public class BlogRepository(BlogContext context) : IBlogRepository
+    {
+        // ссылка на контекст
+        private readonly BlogContext _context = context;
+
+        public async Task AddUser(User user)
+        {
+            // Добавление пользователя
+            var entry = _context.Entry(user);
+            if (entry.State == EntityState.Detached)
+                await _context.Users.AddAsync(user);
+
+            // Сохранение изенений
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task<User[]> GetUsers()
+        {
+            // Получим всех активных пользователей
+            return await _context.Users.ToArrayAsync();
+        }
+    }
+}
