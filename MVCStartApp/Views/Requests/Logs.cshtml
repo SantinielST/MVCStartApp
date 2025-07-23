@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Logs users action";
+}
+
+<style>
+    table {
+        border-spacing: 0 15px;
+        align-self: center;
+    }
+
+    th {
+        background-color: #4287f5;
+        color: whitesmoke;
+    }
+
+    th, td {
+        width: 150px;
+        text-align: center;
+        border: 1px solid black;
+        padding: 5px;
+    }
+
+    h2 {
+        color: #4287f5;
+        text-align: left;
+    }
+</style>
+
+<div class="text-center">
+    <h2 class="display-4">Requests</h2>
+    <br />
+    <table>
+        <tr>
+            <td>Id</td>
+            <td>DateTime</td>
+            <td>Url</td>
+        </tr>
+        @foreach(var request in Model)
+        {
+            <tr>
+                <td>@request.Id</td>
+                <td>@request.Date</td>
+                <td>@request.Url</td>
+            </tr>
+        }
+    </table>
+</div>

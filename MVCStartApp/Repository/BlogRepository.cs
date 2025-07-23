@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using MVCStartApp.DLL.Repository.Interfaces;
 using MVCStartApp.Models;
 
@@ -24,6 +25,21 @@ namespace MVCStartApp.Repository
         {
             // Получим всех активных пользователей
             return await _context.Users.ToArrayAsync();
+        }
+
+        [HttpPost]
+        public async Task Register(User user)
+        {
+            user.JoinDate = DateTime.Now;
+            user.Id = Guid.NewGuid();
+
+            // Добавление пользователя
+            var entry = _context.Entry(user);
+            if (entry.State == EntityState.Detached)
+                await _context.Users.AddAsync(user);
+
+            // Сохранение изменений
+            await _context.SaveChangesAsync();
         }
     }
 }
