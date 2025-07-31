@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace MVCStartApp.Models;
+namespace MVCStartApp.BLL.Models;
 
 [Table("Requests")]
 public class Request

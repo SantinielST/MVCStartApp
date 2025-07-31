@@ -1,4 +1,4 @@
-﻿using MVCStartApp.Models;
+﻿using MVCStartApp.BLL.Models;
 
 namespace MVCStartApp.DLL.Repository.Interfaces;
 

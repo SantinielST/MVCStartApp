@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
+using MVCStartApp.DLL;
+using MVCStartApp.DLL.Repository;
 using MVCStartApp.DLL.Repository.Interfaces;
 using MVCStartApp.Middlewares;
-using MVCStartApp.Repository;
-using MVCStartApp.Repository.Interfaces;
 using MVCStartApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);

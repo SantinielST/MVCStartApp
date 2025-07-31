@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MVCStartApp.DLL.Repository.Interfaces;
-using MVCStartApp.Models;
+using MVCStartApp.BLL.Models;
 using MVCStartApp.Services;
 
 namespace MVCStartApp.Controllers;

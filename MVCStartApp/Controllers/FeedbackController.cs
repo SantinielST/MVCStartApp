@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MVCStartApp.Models;
+using MVCStartApp.BLL.Models;
 using MVCStartApp.Services;
 using System.Diagnostics;
-using System.Threading.Tasks;
 
 namespace MVCStartApp.Controllers;
 
@@ -20,7 +19,7 @@ public class FeedbackController(ILoggerService loggerService) : Controller
 
         if (HttpContext.Items.TryGetValue("CurrentDateTime", out var dateTimeObj))
         {
-           await _loggerService.Log(requestUrl, dateTimeObj);
+            await _loggerService.Log(requestUrl, dateTimeObj);
         }
 
         return View();

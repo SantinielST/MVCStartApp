@@ -1,6 +1,6 @@
-﻿using MVCStartApp.Models;
+﻿using MVCStartApp.BLL.Models;
 
-namespace MVCStartApp.Repository.Interfaces;
+namespace MVCStartApp.DLL.Repository.Interfaces;
 
 public interface IRequestRepository
 {

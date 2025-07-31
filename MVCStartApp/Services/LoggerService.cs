@@ -1,5 +1,5 @@
-﻿using MVCStartApp.Models;
-using MVCStartApp.Repository.Interfaces;
+﻿using MVCStartApp.BLL.Models;
+using MVCStartApp.DLL.Repository.Interfaces;
 
 namespace MVCStartApp.Services
 {

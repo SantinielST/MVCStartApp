@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using MVCStartApp.Models;
-using MVCStartApp.Repository.Interfaces;
+using MVCStartApp.BLL.Models;
+using MVCStartApp.DLL.Repository.Interfaces;
 
-namespace MVCStartApp.Repository;
+namespace MVCStartApp.DLL.Repository;
 
 public class RequestRepository(BlogContext context) : IRequestRepository
 {

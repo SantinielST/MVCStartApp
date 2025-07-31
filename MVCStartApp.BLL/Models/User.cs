@@ -1,4 +1,4 @@
-﻿namespace MVCStartApp.Models;
+﻿namespace MVCStartApp.BLL.Models;
 
 /// <summary>
 /// модель пользователя в блоге

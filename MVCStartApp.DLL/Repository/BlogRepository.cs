@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MVCStartApp.DLL.Repository.Interfaces;
-using MVCStartApp.Models;
+using MVCStartApp.BLL.Models;
 
-namespace MVCStartApp.Repository
+namespace MVCStartApp.DLL.Repository
 {
     public class BlogRepository(BlogContext context) : IBlogRepository
     {

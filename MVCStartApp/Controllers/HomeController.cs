@@ -1,7 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using MVCStartApp.DLL.Repository.Interfaces;
-using MVCStartApp.Models;
+using MVCStartApp.BLL.Models;
 
 namespace MVCStartApp.Controllers
 {
